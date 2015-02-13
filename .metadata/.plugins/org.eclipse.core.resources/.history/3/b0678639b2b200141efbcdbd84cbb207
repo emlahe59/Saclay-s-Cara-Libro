@@ -1,0 +1,23 @@
+package modele;
+
+public class Modele_Accueil {
+
+	static private final String IP = "127.0.0.1";
+	static private final int PORT = 3306;
+	
+	private String identifiant;
+	private String motDePasse;
+	
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
+	}
+	
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
+	}
+	
+	public String connection() {
+		return "UTILISATEUR";
+	}
+
+}

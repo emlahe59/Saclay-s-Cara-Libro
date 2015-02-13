@@ -1,0 +1,39 @@
+package controleur;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import modele.Modele_Accueil;
+import vue.Vue_Accueil;
+
+public class Controleur_Accueil implements ActionListener {
+
+	// constantes pour les actionCommand
+	static public final String ACTION_CONNECTION = "CONNECTION";
+	static public final String ACTION_CREER_COMPTE = "CREER_COMPTE";
+	
+	private Modele_Accueil modeleAccueil;
+	private Vue_Accueil vueAccueil;
+	
+	public Controleur_Accueil(Modele_Accueil modeleAccueil, Vue_Accueil vueAccueil) {
+		this.modeleAccueil = modeleAccueil;
+		this.vueAccueil = vueAccueil;
+		vueAccueil.setListener(this);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		vueAccueil.redessiner();
+		if (e.getActionCommand() == ACTION_CONNECTION) {
+			modeleAccueil.setIdentifiant(vueAccueil.getIdentifiant());
+			modeleAccueil.setMotDePasse(vueAccueil.getMotDePasse());
+			modeleAccueil.connection();
+			
+		}
+		else if (e.getActionCommand() == ACTION_CREER_COMPTE) {
+			modeleAccueil.setIdentifiant(vueAccueil.getIdentifiant());
+			modeleAccueil.setMotDePasse(vueAccueil.getMotDePasse());
+			//Utilisateur.creerCompte();
+		}
+	}
+
+}

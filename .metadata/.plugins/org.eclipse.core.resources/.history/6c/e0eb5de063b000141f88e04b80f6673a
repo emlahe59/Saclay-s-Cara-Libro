@@ -1,0 +1,17 @@
+package controleur;
+
+public class Compte {
+
+	private String id;
+	private String motDePasse;
+	
+	public void connecter() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

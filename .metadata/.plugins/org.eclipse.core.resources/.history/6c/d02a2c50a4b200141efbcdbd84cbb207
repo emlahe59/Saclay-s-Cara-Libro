@@ -1,0 +1,11 @@
+package vue;
+
+import javax.swing.JFrame;
+
+public class Vue_Test extends JFrame {
+
+	public Vue_Test() {
+		
+	}
+	
+}

@@ -1,0 +1,23 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class ClientApp {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Client");
+		frame.setLayout(new GridLayout(2,1));
+		
+		JPanel panelButtons = new JPanel();
+		panelButtons.setLayout(new GridLayout(1,2));
+		panelButtons.add(new JButton("Se connecter"));
+		panelButtons.add(new JButton("S'inscrire"));
+		
+		JPanel panelInfos = new JPanel();
+		panelInfos.setLayout(new GridLayout(1,1));
+	}
+
+}

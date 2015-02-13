@@ -1,0 +1,13 @@
+import controleur.Controleur_Client;
+import vue.Vue_Accueil;
+import modele.Modele_Accueil;
+
+public class Client {
+
+	public static void main(String[] args) {
+		Modele_Accueil modeleClient = new Modele_Accueil();
+		Vue_Accueil vueClient = new Vue_Accueil();
+		Controleur_Client controleurClient = new Controleur_Client(modeleClient, vueClient);
+	}
+
+}

@@ -1,0 +1,31 @@
+package vue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import controleur.Controleur_Accueil;
+
+public class Vue_Admin extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	// composants de l'interface graphique
+	JButton boutonDeconnection;
+	
+	public Vue_Admin() {
+		boutonDeconnection = new JButton("Se Déconnecter");
+		this.add(boutonDeconnection);
+		
+		// affichage de la fenêtre
+		this.setTitle("Panneau d'administration");
+		this.pack();
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	
+	public void setListener(Controleur_Admin controleurAccueil) {
+		boutonConnection.addActionListener(controleurAccueil);
+		boutonCreerCompte.addActionListener(controleurAccueil);
+	}
+	
+}

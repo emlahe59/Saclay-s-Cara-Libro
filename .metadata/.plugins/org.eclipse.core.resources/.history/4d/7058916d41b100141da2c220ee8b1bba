@@ -1,0 +1,65 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+
+import controleur.Controleur_Client;
+import vue.Vue_Client;
+import modele.Modele_Client;
+
+public class ClientApp {
+	
+	
+	public static void main(String[] args) {
+		Modele_Client modeleClient = new Modele_Client();
+		Vue_Client vueClient = new Vue_Client(modeleClient);
+		
+		
+		
+	JPanel panneauInfos;
+	JPanel panneauBoutons;
+	JButton boutonConnection;
+	JButton boutonCreerCompte;
+	JLabel labelIdentifiant;
+	 JLabel labelMotDePasse;
+	JTextArea texteIdentifiant;
+	JPasswordField champMotDePasse;
+		// création du panneau pour les informations de login
+				panneauInfos = new JPanel();
+				panneauInfos.setLayout(new GridLayout(2, 2));
+				labelIdentifiant = new JLabel("Identifiant :");
+				panneauInfos.add(labelIdentifiant);
+				texteIdentifiant = new JTextArea("");
+				panneauInfos.add(texteIdentifiant);
+				labelMotDePasse = new JLabel("Mot de passe :");
+				panneauInfos.add(labelMotDePasse);
+				champMotDePasse = new JPasswordField("");
+				champMotDePasse.setEchoChar('*');
+				panneauInfos.add(champMotDePasse);
+				
+				// création du panneau pour les boutons
+				panneauBoutons = new JPanel();
+				panneauBoutons.setLayout(new GridLayout(1, 2));
+				boutonConnection = new JButton("Connection");
+				panneauBoutons.add(boutonConnection);
+				boutonConnection.setActionCommand(Controleur_Client.ACTION_CONNECTION);
+				boutonCreerCompte = new JButton("Créer un compte");
+				panneauBoutons.add(boutonCreerCompte);
+				boutonCreerCompte.setActionCommand(Controleur_Client.ACTION_CREER_COMPTE);
+				
+				// affichage de la fenêtre
+				vueClient.setTitle("Client");
+				vueClient.setLayout(new GridLayout(2, 1));
+				vueClient.add(panneauInfos);
+				vueClient.add(panneauBoutons);
+				vueClient.pack();
+				vueClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				vueClient.setVisible(true);
+				Controleur_Client controleurClient = new Controleur_Client(modeleClient, vueClient);
+	}
+
+}

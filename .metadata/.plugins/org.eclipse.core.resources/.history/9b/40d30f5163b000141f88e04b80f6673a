@@ -1,0 +1,12 @@
+package controleur;
+
+public class Utilisateur {
+
+	private String Nom;
+	private String Prenom;
+	
+	public void setNom(String s) {
+		Nom = s;
+	}
+	
+}

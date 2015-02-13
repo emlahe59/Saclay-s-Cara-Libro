@@ -1,0 +1,13 @@
+//import controleur.Controleur_Client;
+import vue.Vue_Client;
+import modele.Modele_Client;
+
+public class ClientApp {
+
+	public static void main(String[] args) {
+		Modele_Client client = new Modele_Client();
+		Vue_Client vueClient = new Vue_Client(client);
+		//Controleur_Client controleurClient = new Controleur_Client(client, vueClient);
+	}
+
+}

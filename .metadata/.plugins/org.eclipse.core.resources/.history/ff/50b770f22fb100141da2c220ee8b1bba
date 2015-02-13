@@ -1,0 +1,45 @@
+package modele;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.security.MessageDigest;
+
+public class Modele_Client {
+
+	private Socket socket;
+	private String identifiant;
+	private String motDePasse;
+	
+	static private final int PORT = 21025;
+	static private final String IP = "127.0.0.1";
+
+	public void setIdentifiant(String identifiant) {
+		this.identifiant = identifiant;
+	}
+	
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
+	}
+	
+	public void connection() {
+		// tente de se connecter au serveur
+		try {
+			socket = new Socket(InetAddress.getByName(IP), PORT);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		// crypte le mot de passe avec MD5
+		MessageDigest md5 = MessageDigest.getInstance("MD5");
+		md5.update(motDePasse.getBytes(), 0, motDePasse.length());
+		String motDePasseHash = motDePasse.hashCode();
+		
+		// envoie des logs au serveur
+		
+		
+		// réception
+		
+	}
+
+}

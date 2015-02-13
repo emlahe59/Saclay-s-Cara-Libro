@@ -1,0 +1,82 @@
+package vue;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+
+import controleur.Controleur_Client;
+import modele.Modele_Client;
+
+public class Vue_Client extends JFrame {
+
+	private Modele_Client modeleClient;
+	
+	// composants de l'interface graphique
+	private JPanel panneauInfos;
+	private JPanel panneauBoutons;
+	private JButton boutonConnection;
+	private JButton boutonCreerCompte;
+	private JLabel labelIdentifiant;
+	private JLabel labelMotDePasse;
+	private JTextArea texteIdentifiant;
+	private JPasswordField champMotDePasse;
+	
+	public Vue_Client(Modele_Client modeleClient) {
+		this.modeleClient = modeleClient;
+		
+		// création du panneau pour les informations de login
+		panneauInfos = new JPanel();
+		panneauInfos.setLayout(new GridLayout(2, 2));
+		labelIdentifiant = new JLabel("Identifiant :");
+		panneauInfos.add(labelIdentifiant);
+		texteIdentifiant = new JTextArea("");
+		panneauInfos.add(texteIdentifiant);
+		labelMotDePasse = new JLabel("Mot de passe :");
+		panneauInfos.add(labelMotDePasse);
+		champMotDePasse = new JPasswordField("");
+		champMotDePasse.setEchoChar('*');
+		panneauInfos.add(champMotDePasse);
+		
+		// création du panneau pour les boutons
+		panneauBoutons = new JPanel();
+		panneauBoutons.setLayout(new GridLayout(1, 2));
+		boutonConnection = new JButton("Connection");
+		panneauBoutons.add(boutonConnection);
+		boutonCreerCompte = new JButton("Créer un compte");
+		panneauBoutons.add(boutonCreerCompte);
+		
+	}
+
+	public String getIdentifiant() {
+		return texteIdentifiant.getText();
+	}
+	
+	public String getMotDePasse() {
+		return champMotDePasse.getPassword().toString();
+	}
+
+	public void redessiner() {
+		texteIdentifiant.setText("");
+		champMotDePasse.setText("");
+	}
+
+	public void init() {
+		boutonConnection.setActionCommand(Controleur_Client.ACTION_CONNECTION);
+		boutonCreerCompte.setActionCommand(Controleur_Client.ACTION_CREER_COMPTE);
+		
+		// affichage de la fenêtre
+		this.setTitle("Client");
+		this.setLayout(new GridLayout(2, 1));
+		this.add(panneauInfos);
+		this.add(panneauBoutons);
+		this.pack();
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+}

@@ -1,0 +1,17 @@
+package vue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Vue_Test extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	private JLabel label;
+	
+	public Vue_Test() {
+		label = new JLabel("TEST :)");
+		this.add(label);
+	}
+	
+}

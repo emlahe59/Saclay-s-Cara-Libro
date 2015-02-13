@@ -1,0 +1,17 @@
+package vue;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Vue_Admin extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	// composants de l'interface graphique
+	JButton boutonDeconnection;
+	
+	public Vue_Admin() {
+		
+	}
+	
+}
