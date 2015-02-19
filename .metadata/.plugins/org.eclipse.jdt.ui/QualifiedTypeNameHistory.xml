@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="modele.Client"/>
 <fullyQualifiedTypeName name="vue.Vue_Client"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
 <fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
@@ -14,16 +13,20 @@
 <fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
 <fullyQualifiedTypeName name="java.security.MessageDigest"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="vue.Interface_Vue"/>
 <fullyQualifiedTypeName name="vue.Vue_Test"/>
-<fullyQualifiedTypeName name="vue.Vue_Admin"/>
-<fullyQualifiedTypeName name="vue.Vue_Utilisateur"/>
-<fullyQualifiedTypeName name="modele.Modele_Utilisateur"/>
 <fullyQualifiedTypeName name="modele.Modele_Admin"/>
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="controleur.Controleur_Admin"/>
-<fullyQualifiedTypeName name="controleur.Controleur_Utilisateur"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="modele.Modele_Utilisateur"/>
+<fullyQualifiedTypeName name="vue.Vue"/>
+<fullyQualifiedTypeName name="vue.Vue_Utilisateur"/>
+<fullyQualifiedTypeName name="vue.Vue_Admin"/>
+<fullyQualifiedTypeName name="controleur.Controleur_Utilisateur"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="javax.swing.JDialog"/>
 </qualifiedTypeNameHistroy>

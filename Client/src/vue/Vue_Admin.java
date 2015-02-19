@@ -1,11 +1,9 @@
 package vue;
 
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import controleur.Controleur_Admin;
+import controleur.Controleur_Utilisateur;
 
 public class Vue_Admin extends JFrame {
 
@@ -14,20 +12,17 @@ public class Vue_Admin extends JFrame {
 	// composants de l'interface graphique
 	JButton boutonDeconnection;
 	
-	public Vue_Admin() {
+	public Vue_Admin(Controleur_Utilisateur controleurUtilisateur) {
 		boutonDeconnection = new JButton("Se Déconnecter");
 		this.add(boutonDeconnection);
-		boutonDeconnection.setActionCommand(Controleur_Admin.ACTION_DECONNECTION);
+		boutonDeconnection.setActionCommand(Controleur_Utilisateur.ACTION_DECONNECTION);
+		boutonDeconnection.addActionListener(controleurUtilisateur);
 		
 		// affichage de la fenêtre
 		this.setTitle("Panneau d'administration");
 		this.pack();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
-	}
-	
-	public void setListener(ActionListener controleur) {
-		boutonDeconnection.addActionListener(controleur);
 	}
 	
 }
